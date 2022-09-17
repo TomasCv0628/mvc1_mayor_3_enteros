@@ -7,9 +7,9 @@ public class VentanaPrincipal extends JFrame
     //------------------------- 
     // Atributos
     //-------------------------
-    private PanelEntradaDatos miPanelEntradaDatos;
-    private PanelResultados miPanelResultados;
-    private PanelOperaciones miPanelOperaciones;
+    public PanelEntradaDatos miPanelEntradaDatos;
+    public PanelResultados miPanelResultados;
+    public PanelOperaciones miPanelOperaciones;
 
     //------------------------- 
     // Métodos
@@ -22,16 +22,6 @@ public class VentanaPrincipal extends JFrame
     {
         // Definicion
         this.setLayout(null);
-        
-        // Creación y adición de un panel tipo PanelResultados
-        miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,210,480,125);
-        this.add(miPanelOperaciones);
- 
-        // Creación y adición de un panel tipo PanelResultados
-        miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(10,345,480,125);
-        this.add(miPanelResultados);
 
         // Creación y adición de un panel tipo PanelEntradaDatos
 
@@ -39,10 +29,21 @@ public class VentanaPrincipal extends JFrame
         miPanelEntradaDatos.setBounds(10,10,480,210);
         this.add(miPanelEntradaDatos);
 
+        // Creación y adición de un panel tipo PanelResultados
+        miPanelOperaciones = new PanelOperaciones();
+        miPanelOperaciones.setBounds(10,230,480,60);
+        this.add(miPanelOperaciones);
+ 
+        // Creación y adición de un panel tipo PanelResultados
+        miPanelResultados = new PanelResultados();
+        miPanelResultados.setBounds(10,300,480,165);
+        this.add(miPanelResultados);
+
+
+
         // Caracteristicas de la ventana
         this.setTitle("Mayor de tres enteros");
         this.setSize(500,500);
-        // this.setLocation(100,100);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);

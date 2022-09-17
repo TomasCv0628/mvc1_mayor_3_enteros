@@ -1,7 +1,7 @@
 package mvc1_mayor_3_enteros.vista;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.BorderFactory;
 import javax.swing.border.TitledBorder;
@@ -17,11 +17,10 @@ public class PanelEntradaDatos extends JPanel
     private JLabel lbX;
     private JLabel lbY;
     private JLabel lbZ;
-    private ImageIcon iImagen;
-    private JLabel lbImagen;
-    private JTextField tX;
-    private JTextField tY;
-    private JTextField tZ;
+    private JTextField tfx;
+    private JTextField tfy;
+    private JTextField tfz;
+
 
 
     // Metodo constructor
@@ -33,84 +32,78 @@ public class PanelEntradaDatos extends JPanel
 
         // crear y agregar etiqueta para titulo
 
-        lbTitulo = new JLabel("Mayor de 3 enteros", JLabel.CENTER);
+        lbTitulo = new JLabel("Mayor de 3 enteros",JLabel.CENTER);
         lbTitulo.setFont(new Font("Arial", Font.BOLD, 20));
-        lbTitulo.setBounds(0,0,480,20);
+        lbTitulo.setBounds(0,10,480,20);
         this.add(lbTitulo);
 
         // Borde y titulo
         TitledBorder borde = BorderFactory.createTitledBorder("Datos Entrada");
-        borde.setTitleColor(Color.BLUE);
+        borde.setTitleColor(Color.GRAY);
         this.setBorder(borde);
 
         lbX = new JLabel("X = ");
         lbX.setFont(new Font("Arial", Font.BOLD, 20));
-        lbX.setBounds(5,50,50,50);
+        lbX.setBounds(0,50,50,50);
         this.add(lbX);
         lbX.setForeground(Color.CYAN);
-        JTextField X = new JTextField();
-        tX.setBounds(50,70,90,15);
-        tX.setBackground(Color.GRAY);
-        tX.setForeground(Color.WHITE);
-        this.add(X);
+        tfx = new JTextField();
+        tfx.setBounds(50,70,90,15);
+        tfx.setBackground(Color.GRAY);
+        tfx.setForeground(Color.WHITE);
+        this.add(tfx);
 
         // crear y agregar etiqueta para Y
 
         lbY = new JLabel("Y = ");
         lbY.setFont(new Font("Arial", Font.BOLD, 20));
-        lbY.setBounds(5,100,50,50);
+        lbY.setBounds(0,100,50,50);
         lbY.setForeground(Color.CYAN);
         this.add(lbY);
-        JTextField Y = new JTextField();
-        Y.setBounds(50,120,90,15);
-        Y.setBackground(Color.GRAY);
-        Y.setForeground(Color.WHITE);
-        this.add(Y);
+        tfy = new JTextField();
+        tfy.setBounds(50,120,90,15);
+        tfy.setBackground(Color.GRAY);
+        tfy.setForeground(Color.WHITE);
+        this.add(tfy);
 
         // crear y agregar etiqueta para Z
 
         lbZ = new JLabel("Z = ");
         lbZ.setFont(new Font("Arial", Font.BOLD, 20));
-        lbZ.setBounds(5,150,50,50);
+        lbZ.setBounds(0,150,50,50);
         lbZ.setForeground(Color.CYAN);
         this.add(lbZ);
-        JTextField Z = new JTextField();
-        tZ.setBounds(50,170,90,15);
-        tZ.setBackground(Color.GRAY);
-        tZ.setForeground(Color.WHITE);
-        this.add(Z);
+        tfz = new JTextField();
+        tfz.setBounds(50,170,90,15);
+        tfz.setBackground(Color.GRAY);
+        tfz.setForeground(Color.WHITE);
+        this.add(tfz);                
+    }
 
-        iImagen = new ImageIcon(getClass().getResource("vista/mayor"));
-        lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(5,360,100,100);
-        this.add(lbImagen);
-        // metodos
+    // metodos
 
-        public String gettX()
-        {
-            return tX.getText();
-        }
-           
-        public String gettY()
-        {
-            return tY.getText();
-        }
+    public String getTfx()
+    {
+        return tfx.getText();
+    }
+
+    public String getTfy()
+    {
+        return tfy.getText();
+    }
             
-        public String gettZ()
-        {
-            return tZ.getText();
-        }
+    public String getTfz()
+    {
+        return tfz.getText();
+    }
 
-        // Metodo Borrar caja de texto
+    // Metodo Borrar caja de texto
 
-        public void borrar()
-        {
-            X.setText("");
-            Y.setText("");
-            Z.setText("");
-
-        }
-                 
+    public void borrar()
+    {
+        tfx.setText("");
+        tfy.setText("");
+        tfz.setText("");
     }
 
 }
